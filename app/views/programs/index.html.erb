@@ -1,0 +1,21 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Program index</title>
+</head>
+<body>
+	
+	<%= link_to "Yeni program", new_program_path %>
+	
+	<% @program.each do |p| %>
+	<ul>
+		<li><%= p.title %></li>
+		<%= link_to "Delete", p, confirm: "Silmek istediginize emin misiniz?", method: :delete%>
+		
+		<%= link_to "Edit", edit_program_path(p)%>
+	</ul>
+	<% end %>
+	
+	<%= debug @program %>
+</body>
+</html>

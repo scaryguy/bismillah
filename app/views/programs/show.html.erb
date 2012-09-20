@@ -1,0 +1,18 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Program detay</title>
+</head>
+<body>
+	
+	<h1>Program adi: <%= @program.title %></h1>
+	<p>Program icerigi: <%= @program.content%></p>
+	<p>Program durumnu: 
+		
+		<% if @program.active %> Aktif
+		
+		<% else %>Pasif
+		<% end %></p>
+	
+</body>
+</html>
